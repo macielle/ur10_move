@@ -101,17 +101,19 @@ class MoveManipulator(object):
 def main():
 
   try:
-    print "============ Press `Enter` to begin the sequence by setting up the moveit_commander (press ctrl-d to exit) ..."
+    print "============ Press `Enter` to begin the sequence (press ctrl-d to exit) ..."
     raw_input()
     tutorial = MoveManipulator()
     print "============ Press `Enter` to pick the object ..."
     raw_input()
     print "============ Attempting home position."
     tutorial.go_to_home()
-    print "============ Home position executed.Press 'Enter' to continue."
+    print "============ Home position executed. Press 'Enter' to continue."
     raw_input()
+    print "============ Attempting waypoint."
     tutorial.go_to_waypoint()
-    print "============ Waypoint executed."
+    print "============ Waypoint executed. Press 'Enter' to continue."
+    raw_input()
     tutorial.go_to_object()
     print "============ Object picked!"
     print "============ Press 'Enter' to place the object ..."
